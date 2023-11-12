@@ -78,7 +78,7 @@
                                         <attributes>
                                             <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="NSColor" red="0.21930239898989901" green="0.21930239898989901" blue="0.21930239898989901" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <font key="NSFont" size="24" name="Helvetica-Bold"/>
+                                            <font key="NSFont" size="20" name="Helvetica-Bold"/>
                                             <real key="NSKern" value="0.0"/>
                                             <font key="NSOriginalFont" size="24" name="Helvetica"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
@@ -89,11 +89,11 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="История изменения значения счётчика" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sja-0F-MPC">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="История изменения:" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sja-0F-MPC">
                                 <rect key="frame" x="19" y="218" width="355" height="342"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <color key="textColor" systemColor="secondaryLabelColor"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>

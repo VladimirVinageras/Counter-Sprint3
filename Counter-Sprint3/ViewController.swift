@@ -66,7 +66,7 @@ class ViewController: UIViewController {
         let counterRecord = CounterRecord(dateRecord: Date(), counterEvent: newCounterEvent)
         history.append(counterRecord)
         
-        var historyListFormatted = ""
+        var historyListFormatted = "История изменений: \n \n"
         for record in history.reversed() {
             historyListFormatted += record.eventRecord + "\n"
         
