@@ -1,24 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Counter_Sprint3" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wXx-IT-a3T">
+                                <rect key="frame" x="44.000000000000007" y="608" width="72.666666666666686" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="5v1-Fi-MPg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="+">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="72"/>
+                                    <color key="baseForegroundColor" red="1" green="0.79663584180000002" blue="0.80002524450000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="increaseCounterOnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q8T-mL-VYw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wzt-nP-rSc">
+                                <rect key="frame" x="162" y="608" width="69" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="AVX-X1-Zf9"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.counterclockwise">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                    </backgroundConfiguration>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large" weight="bold"/>
+                                    <attributedString key="attributedTitle"/>
+                                    <color key="baseForegroundColor" red="1" green="0.79663584180000002" blue="0.80002524450000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="resetCounterOnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y1z-Ca-Ny8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2m-rQ-ov7">
+                                <rect key="frame" x="275" y="608" width="69" height="105"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="-">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="80"/>
+                                    <color key="baseForegroundColor" red="0.98704598509999997" green="0.77855245470000001" blue="0.78202734689999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="decreaseCounterOnTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fqI-b0-Qpq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8d6-Kz-PQl">
+                                <rect key="frame" x="62" y="150" width="269" height="52"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="1" green="0.99245125140000001" blue="0.97643095869999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="mPo-m2-dqB"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Значение счетчика: 0">
+                                        <attributes>
+                                            <color key="NSBackgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="0.21930239898989901" green="0.21930239898989901" blue="0.21930239898989901" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="24" name="Helvetica-Bold"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <font key="NSOriginalFont" size="24" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="36" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="История изменения значения счётчика" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sja-0F-MPC">
+                                <rect key="frame" x="19" y="218" width="355" height="342"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="19"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wXx-IT-a3T" firstAttribute="top" secondItem="sja-0F-MPC" secondAttribute="bottom" constant="48" id="19f-sp-nB8"/>
+                            <constraint firstItem="Wzt-nP-rSc" firstAttribute="top" secondItem="q2m-rQ-ov7" secondAttribute="top" id="BLd-iE-0Km"/>
+                            <constraint firstItem="wXx-IT-a3T" firstAttribute="top" secondItem="Wzt-nP-rSc" secondAttribute="top" id="G0S-2J-4UE"/>
+                            <constraint firstItem="8d6-Kz-PQl" firstAttribute="centerX" secondItem="sja-0F-MPC" secondAttribute="centerX" id="HEx-1z-7D6"/>
+                            <constraint firstItem="wXx-IT-a3T" firstAttribute="bottom" secondItem="Wzt-nP-rSc" secondAttribute="bottom" id="Hgs-lh-zQH"/>
+                            <constraint firstItem="sja-0F-MPC" firstAttribute="top" secondItem="8d6-Kz-PQl" secondAttribute="bottom" constant="16" id="I7W-jU-Z65"/>
+                            <constraint firstItem="Wzt-nP-rSc" firstAttribute="leading" secondItem="wXx-IT-a3T" secondAttribute="trailing" constant="45.333333333333314" id="PFV-LO-P3f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="q2m-rQ-ov7" secondAttribute="trailing" constant="49" id="T91-f1-7F8"/>
+                            <constraint firstItem="sja-0F-MPC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="Utz-cL-2ha"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wXx-IT-a3T" secondAttribute="bottom" constant="105" id="dGp-Pa-8Ff"/>
+                            <constraint firstItem="sja-0F-MPC" firstAttribute="centerX" secondItem="Wzt-nP-rSc" secondAttribute="centerX" id="eQr-2I-2ZC"/>
+                            <constraint firstItem="q2m-rQ-ov7" firstAttribute="leading" secondItem="Wzt-nP-rSc" secondAttribute="trailing" constant="44" id="gAm-Os-qFw"/>
+                            <constraint firstItem="8d6-Kz-PQl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="91" id="gRf-Tl-C5H"/>
+                            <constraint firstItem="Wzt-nP-rSc" firstAttribute="bottom" secondItem="q2m-rQ-ov7" secondAttribute="bottom" id="i4s-9k-fft"/>
+                            <constraint firstItem="8d6-Kz-PQl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="osC-CC-XWj"/>
+                            <constraint firstItem="wXx-IT-a3T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="p3s-Ao-2Qr"/>
+                            <constraint firstItem="8d6-Kz-PQl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s1O-Zf-n0a"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="8d6-Kz-PQl" id="yR5-3Z-kvd"/>
+                        <outlet property="counterTextView" destination="sja-0F-MPC" id="8pg-fB-6IO"/>
+                        <outlet property="decreaseButton" destination="q2m-rQ-ov7" id="xa0-nv-kpx"/>
+                        <outlet property="increaseButton" destination="wXx-IT-a3T" id="ZUc-Ka-VFK"/>
+                        <outlet property="resetButton" destination="Wzt-nP-rSc" id="AES-8t-LfL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-289.3129770992366" y="-128.16901408450704"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow.counterclockwise" width="128" height="128"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
